@@ -3,22 +3,23 @@
 # Reference:
 #  - https://mosquitto.org/2013/01/mosquitto-debian-repository/
 #
+# Based on https://github.com/somsakc/docker-mosquitto
+# Updated to use stretch-slim
 
-FROM arm32v7/debian:jessie
-MAINTAINER Somsak Chartsrisak <somsakc@mbixtech.com>
+FROM arm32v7/debian:stretch-slim
 
 LABEL description="Eclipse Mosquitto MQTT Broker"
-LABEL vendor="MBIX TECH"
-LABEL version="1.1"
+LABEL vendor="dromer1967"
+LABEL version="1.0"
 
 RUN apt-get update && \
-    apt-get -y install wget
+    apt-get -y install wget gnupg
 
 RUN wget http://repo.mosquitto.org/debian/mosquitto-repo.gpg.key && \
     apt-key add mosquitto-repo.gpg.key && \
     rm -f mosquitto-repo.gpg.key && \
     cd /etc/apt/sources.list.d/ && \
-    wget http://repo.mosquitto.org/debian/mosquitto-jessie.list && \
+    wget http://repo.mosquitto.org/debian/mosquitto-stretch.list && \
     apt-get update && \
     apt-get -y install mosquitto
 

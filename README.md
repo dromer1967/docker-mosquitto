@@ -1,6 +1,7 @@
 # docker-mosquitto
 
 Porting official Eclipse mosquitto package to Docker image running on Raspberri Pi 2/3 (ARMv7 32-bit or arm32v7) platform.
+Image is based on debian:stretch-slim.
 
 ## Directories
 Three directories have been created in the image to be used for configuration, persistence storage and log.
@@ -13,7 +14,7 @@ Three directories have been created in the image to be used for configuration, p
 Run Docker with minimal options by using default configuration supplied by Docker image.<br>
 `$ docker run -d -e TZ=<timezone> -p 1883:1883 mbixtech/arm32v7-mosquitto`
 
-For example, TZ=Asia/Bangkok
+For example, TZ=Europe/Amsterdam
 
 ### Alternative 2:
 Use a custom configuration file by mounting to local /mosquitto/config/mosquitto.conf file.<br>
