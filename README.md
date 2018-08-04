@@ -31,7 +31,7 @@ Map local directories to all specific directories of Docker container.<br>
 `$ docker run -d -e TZ=<timezone> -p 1883:1883 -v config:/mosquitto/config -v data:/mosquitto/data -v log:/mosquitto/log mbixtech/arm32v7-mosquitto`
 
 ## Credits
-Build Dockerfile base on original from https://github.com/eclipse/mosquitto/tree/master/docker git repository.
+Build Dockerfile base on https://github.com/somsakc/docker-mosquitto git repository.
 
 ## Git Repository
-Refer to https://github.com/somsakc/docker-mosquitto
+Refer to https://github.com/dromer1967/docker-mosquitto
