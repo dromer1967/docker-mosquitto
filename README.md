@@ -1,5 +1,9 @@
 # docker-mosquitto
 
+Update: this is obsolete. Simply use the official version from eclipse. That will work on raspberry PI too.
+
+See https://hub.docker.com/_/eclipse-mosquitto?tab=description
+
 Porting official Eclipse mosquitto package to Docker image running on Raspberri Pi 2/3 (ARMv7 32-bit or arm32v7) platform.
 Image is based on debian:stretch-slim.
 
